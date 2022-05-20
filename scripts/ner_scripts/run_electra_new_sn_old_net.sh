@@ -1,0 +1,2 @@
+bash run_train_models_ner_sn_old_net.sh
+bash run_eval_conll2003_det_models_sn_old_net.sh

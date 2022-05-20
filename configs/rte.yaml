@@ -1,0 +1,20 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task}/${ue.mc_type}_${ue.dropout_subs}/${data.subsample_perc}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+model:
+    model_name: 'google/electra-base-discriminator'
+    n_epochs: 4
+    already_finetuned: false
+ue:
+    mc_type: 'MC'
+    inference_prob: 0.1
+    committee_size: 10
+    dropout_subs: 'last'
+    mask_name: 'dpp'
+data:
+    task: 'RTE'
+    data_dir: '../workdir/glue_data/RTE'
+    subsample_perc: 0.
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0

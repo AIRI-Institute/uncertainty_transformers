@@ -1,0 +1,2 @@
+bash run_exps_diff_size.sh
+bash run_exps_diff_size_sngp.sh

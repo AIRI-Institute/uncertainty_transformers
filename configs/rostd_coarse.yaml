@@ -1,0 +1,52 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.dropout_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+    tokenizer_name: ''
+ue:
+    dropout_type: 'MC'
+    inference_prob: 0.1
+    committee_size: 10
+    dropout_subs: 'last'
+    use_cache: True
+    eval_passes: False
+    calibrate: True
+    use_ood_sampling: False
+    dropout:
+        max_n: 100
+        max_frac: 0.4
+        mask_name: 'dpp'
+        dry_run_dataset: 'eval'
+        is_reused_mask: False
+        mask_name_for_mask: 'rbf'
+        committee_size: 20
+    use_sngp: False
+    sngp:
+        ridge_factor: 0.001
+        gp_hidden_dim: 2048
+        momentum: 0.999
+        use_layer_norm: True
+
+training:
+    seed: 101
+    learning_rate: 5e-5
+    per_device_eval_batch_size: 64
+    per_device_train_batch_size: 512
+    num_train_epochs: 4
+
+data:
+    task_name: 'rostd'
+    task_subset: 'small'
+    data_dir: '../data/rostd_coarse/'
+    subsample_perc: 0.
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0
+do_predict: True
+seed: 42
+suffix: ''
+do_train: True
+do_eval: True
+reset_params: False
+

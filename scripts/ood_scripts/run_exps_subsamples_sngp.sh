@@ -1,0 +1,4 @@
+bash run_train_electra_models_subsamples_clinc_sngp.sh
+bash run_train_electra_models_subsamples_rostd_sngp.sh
+bash run_eval_electra_subsamples_clinc_sngp.sh
+bash run_eval_electra_subsamples_rostd_sngp.sh

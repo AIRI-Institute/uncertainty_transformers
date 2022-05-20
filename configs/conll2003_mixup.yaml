@@ -1,0 +1,33 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.dropout_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+    tokenizer_name: ''
+    
+ue: ???
+training: ???
+mixup: ???
+
+data:
+    task_name: 'conll2003'
+    data_dir: '../workdir/conll2003/'
+    subsample_perc: 0.
+    subsample_perc_val: 0.
+    max_seq_length: 128
+    
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0
+seed: 42
+suffix: ''
+do_predict: True
+do_train: True
+do_eval: True
+do_ue_estimate: False
+spectralnorm_layer: 'last'
+
+defaults:
+  - ue: msd
+  - training: electra_base
+  - mixup: mixup

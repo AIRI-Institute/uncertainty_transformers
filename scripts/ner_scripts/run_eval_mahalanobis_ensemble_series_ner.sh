@@ -1,0 +1,2 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_conll2003_for_ensemble_series.yaml python run_conll2003_for_mahalanobis_ensemble_series.py cuda_devices=1 config_path=../configs/conll2003.yaml ensemble_series_dir=/mnt/users/avazhentsev/uncertainty-estimation/workdir/run_train_ensemble_series/conll2003/electra/ensembles/  output_dir=../workdir/run_conll2003_for_mahalanobis_ensemble_series

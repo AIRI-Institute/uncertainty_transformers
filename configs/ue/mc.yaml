@@ -1,0 +1,12 @@
+ue_type: 'mc'
+dropout_type: 'MC'
+inference_prob: 0.1
+committee_size: 20
+dropout_subs: 'last'
+use_cache: True
+eval_passes: False
+calibrate: False
+use_ood_sampling: False
+use_selective: True
+lamb: 0.01
+reg_type: 'reg-curr'

@@ -1,0 +1,4 @@
+cd ../../src
+CUDA_VISIBLE_DEVICES=1 HYDRA_CONFIG_PATH=../configs/newsgroup.yaml python run_newsgroup_with_hyp_search.py ue.use_selective=False ue.reg_type=raw hydra.run.dir='${output_dir}/${data.task_name}/optimal_hp_${ue.reg_type}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}' &
+CUDA_VISIBLE_DEVICES=2 HYDRA_CONFIG_PATH=../configs/newsgroup.yaml python run_newsgroup_with_hyp_search.py ue.use_selective=True ue.reg_type=metric hydra.run.dir='${output_dir}/${data.task_name}/optimal_hp_${ue.reg_type}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}' &
+CUDA_VISIBLE_DEVICES=3 HYDRA_CONFIG_PATH=../configs/newsgroup.yaml python run_newsgroup_with_hyp_search.py ue.use_selective=True ue.reg_type=reg-curr hydra.run.dir='${output_dir}/${data.task_name}/optimal_hp_${ue.reg_type}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}' &

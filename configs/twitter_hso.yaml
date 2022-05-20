@@ -1,0 +1,31 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.ue_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+    
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+
+ue: ???
+training: ???
+    
+data:
+    task_name: 'twitter_hso'
+    subsample_perc: 0.0
+    max_seq_length: 128
+    validation_subsample: 0.0
+    validation_seed: 42
+  
+spectralnorm_layer: 'last'
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+seed: 42
+suffix: ''
+do_train: True
+do_eval: True
+do_ue_estimate: True
+reset_params: False
+repeat: 0
+
+defaults:
+  - training: electra_base
+  - ue: mc-dpp

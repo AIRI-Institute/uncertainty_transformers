@@ -1,0 +1,8 @@
+lamb: 1.0
+lamb_intra: 0.05
+learning_rate: 3.0e-05
+margin: 10.0
+num_train_epochs: 14
+objective: 0.9382422802850356
+per_device_train_batch_size: 16
+weight_decay: 0.1

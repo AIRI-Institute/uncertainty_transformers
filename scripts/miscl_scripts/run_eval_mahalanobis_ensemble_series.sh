@@ -1,0 +1,4 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_mahalanobis_ensemble_series.py cuda_devices=1 config_path=../configs/mrpc.yaml ensemble_series_dir=/mnt/users/avazhentsev/uncertainty-estimation/workdir/run_train_ensemble_series/mrpc/ensembles/
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_mahalanobis_ensemble_series.py cuda_devices=1 config_path=../configs/cola.yaml ensemble_series_dir=/mnt/users/avazhentsev/uncertainty-estimation/workdir/run_train_ensemble_series/cola/ensembles/
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_mahalanobis_ensemble_series.py cuda_devices=1 config_path=../configs/sst2.yaml ensemble_series_dir=/mnt/users/avazhentsev/uncertainty-estimation/workdir/run_train_ensemble_series/sst2/ensembles/

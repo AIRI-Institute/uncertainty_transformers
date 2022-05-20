@@ -1,0 +1,54 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.dropout_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+    tokenizer_name: ''
+    n_epochs: 4
+    already_finetuned: false
+    config_dir: '/home/avazhentsev/data/sbermed/experimental/ainesterov/symptom_checker/src/test_config.yaml'
+    label_to_id_dir: '/home/avazhentsev/data/tmp/data/top3/l2i_niar_megi.pkl'
+ue:
+    dropout_type: 'MC'
+    inference_prob: 0.1
+    committee_size: 10
+    dropout_subs: 'last'
+    eval_bs: 1000
+    use_cache: True
+    eval_passes: False
+    calibrate: False
+    use_ood_sampling: False
+    dropout:
+        max_n: 100
+        max_frac: 0.4
+        mask_name: 'dpp'
+        dry_run_dataset: 'eval'
+        is_reused_mask: False
+        mask_name_for_mask: 'rbf'
+        committee_size: 20
+
+
+training:
+    seed: 101
+    learning_rate: 5e-5
+    per_device_eval_batch_size: 1000
+    per_device_train_batch_size: 16
+    num_train_epochs: 4
+
+data:
+    task_name: 'symptoms'
+    data_dir: '../workdir/glue_data/symptoms/'
+    subsample_perc: 0.
+    subsample_perc_test: 0.05
+    test_data_dir: '/home/avazhentsev/data/tmp/data/diseasecases_for_msk_body.csv'
+    
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0
+do_predict: True
+seed: 42
+suffix: ''
+do_train: False
+do_eval: True
+reset_params: False
+

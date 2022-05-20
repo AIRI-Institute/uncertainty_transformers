@@ -1,0 +1,12 @@
+hydra:
+  run:
+    dir: ${output_dir}
+
+output_dir: '../workdir/run_train_ensemble_series'
+cuda_devices: [0]
+seed_series: [[101, 711, 217, 77, 1], [102, 712, 218, 78, 2], [103, 713, 219, 79, 3], [104, 714, 220, 80, 5], [1111, 2222, 3333, 4444, 5555]]
+data_ratio:
+script: 'run_glue.py'
+config_dir: '../configs/'
+task_configs: 'mrpc.yaml'
+args: 'data.subsample_perc\=0.63'

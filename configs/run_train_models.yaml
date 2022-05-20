@@ -1,0 +1,11 @@
+cuda_devices: ''
+hydra:
+  run:
+    dir: ${output_dir}
+
+seeds: [4837,42,705525,23419,1084218,10671619]
+config_dir: '../configs/'
+task_configs: 'run_glue.yaml'
+script: 'run_glue.py'
+args: ''
+output_dir: '../workdir/run_train_models'

@@ -1,0 +1,9 @@
+hydra:
+  run:
+    dir: ${output_dir}
+
+runs_dir: '../workdir/run_glue_for_model_series/2021-08-14/10-00-06/results'
+output_dir: '../workdir/run_calc_ues_metrics/'
+metric_types: ["rejection-curve-auc", "rcc-auc", "rpp"]
+extract_config: False
+table_metrics: []

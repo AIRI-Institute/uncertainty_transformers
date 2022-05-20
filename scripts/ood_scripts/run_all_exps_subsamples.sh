@@ -1,0 +1,2 @@
+bash run_exps_subsamples.sh
+bash run_exps_subsamples_sngp.sh

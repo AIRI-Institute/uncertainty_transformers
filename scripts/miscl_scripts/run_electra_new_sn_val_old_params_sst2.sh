@@ -1,0 +1,2 @@
+bash run_train_models_electra_with_sn_old_params_sst2.sh
+bash run_eval_det_models_with_sn_old_params_sst2.sh

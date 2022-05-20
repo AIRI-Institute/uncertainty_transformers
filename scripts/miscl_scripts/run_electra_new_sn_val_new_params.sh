@@ -1,0 +1,2 @@
+bash run_train_models_electra_with_new_sn_val_new_params.sh
+bash run_eval_det_models_with_new_sn_val_new_params.sh

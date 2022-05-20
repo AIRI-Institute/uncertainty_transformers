@@ -1,0 +1,4 @@
+### Datasets
+This folder contains ROSTD, ROSTD-coarse and SNIPS datasets for OOD detection. All datasets were taken from https://github.com/vgtomahawk/LR_GC_OOD.
+1. ROSTD and ROSTD-coarse - special datasets for OOD detection, ROSTD contain 12 classes, ROSTD-coarse - only 3.
+2. SNIPS dataset wasn't designed for OOD detection task, so it must be modified before usage for OOD task. To obtain SNIPS-75 (as in paper about Mahalanobis distance), one should run snips_75.sh script, and after train model on all created datasets and average obtained metrics for all datasets. You can find more about dataset preparation in this paper: https://arxiv.org/pdf/1906.00434.pdf.

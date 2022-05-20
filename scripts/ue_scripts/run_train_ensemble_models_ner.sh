@@ -1,0 +1,2 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_train_ensemble_series.yaml python ./run_train_ensemble_series.py script=run_conll2003.py task_configs=conll2003.yaml args='data.subsample_perc\=0.143 ue.calibrate\=True data.subsample_perc_val\=0.1 ue.use_cache\=True ue.use_selective\=False training.num_train_epochs\=6 training.learning_rate\=5e-05 training.per_device_train_batch_size\=8 +training.weight_decay\=0.01' output_dir='../workdir/run_train_ensemble_series/conll2003/electra' cuda_devices=[0,1,2,3,4,5]

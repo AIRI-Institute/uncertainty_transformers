@@ -1,0 +1,6 @@
+bash run_train_deberta_models.sh
+bash run_eval_deberta_models_det_best.sh
+bash run_eval_deberta_models_mc_best.sh
+bash run_eval_deberta_models_dpp_best.sh
+#bash run_train_deberta_ensemble_models_ner.sh
+#bash run_eval_deberta_ensemble_series_ner.sh

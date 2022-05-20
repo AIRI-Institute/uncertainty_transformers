@@ -1,0 +1,2 @@
+bash run_exps_noise.sh
+bash run_exps_noise_sngp.sh

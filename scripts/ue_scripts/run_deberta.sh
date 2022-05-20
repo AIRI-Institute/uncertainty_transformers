@@ -1,0 +1,3 @@
+bash run_train_deberta_models_glue.sh
+bash run_eval_deberta_all.sh
+#bash run_deberta_all_ner.sh

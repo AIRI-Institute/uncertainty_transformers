@@ -1,0 +1,2 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py cuda_devices=[6] args='ue\=mc do_ue_estimate\=False ue.use_selective\=True ue.calibrate\=False +ue.use_spectralnorm\=False data.validation_subsample\=0.0 training\=electra_base training.num_train_epochs\=13 training.learning_rate\=5e-05 training.per_device_train_batch_size\=16 +training.weight_decay\=0.1 ue.lamb\=0.05' task_configs=mrpc.yaml output_dir=../workdir/run_train_models/electra-reg-False/mrpc/0.0

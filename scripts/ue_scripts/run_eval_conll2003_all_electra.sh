@@ -1,0 +1,7 @@
+bash run_train_models_ner_full.sh
+bash run_eval_conll2003_det_models.sh
+bash run_eval_conll2003_mc_models.sh
+bash run_eval_conll2003_dpp_models.sh
+#bash run_train_ensemble_models_ner.sh
+#bash run_eval_ensemble_series_ner.sh
+#bash run_sngp_all.sh

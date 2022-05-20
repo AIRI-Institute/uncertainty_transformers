@@ -1,0 +1,34 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.ue_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+    
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+    
+ue: ???
+training: ???
+
+data:
+    task_name: 'snips'
+    task_subset: 'plus'
+    task_test: 'validation'
+    data_dir: '../data/snips/'
+    subsample_perc: 0.
+    max_seq_length: 32
+    n_splits: 5
+    
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0
+do_predict: True
+do_ue_estimate: True
+seed: 42
+suffix: ''
+do_train: True
+do_eval: True
+reset_params: False
+spectralnorm_layer: 'last'
+
+defaults:
+  - training: electra_base
+  - ue: mc-dpp

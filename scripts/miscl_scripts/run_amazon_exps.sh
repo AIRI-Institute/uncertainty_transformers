@@ -1,0 +1,2 @@
+bash run_train_electra_models_amazon.sh
+bash run_eval_electra_models_amazon_det_best.sh

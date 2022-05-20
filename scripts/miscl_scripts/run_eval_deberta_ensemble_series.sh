@@ -1,0 +1,4 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_ensemble_series.py cuda_devices=1 config_path=../configs/mrpc.yaml ensemble_series_dir=../workdir/run_train_ensemble_series/deberta/mrpc/ensembles/ output_dir=../workdir/run_glue_for_ensemble_series/deberta/mrpc/
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_ensemble_series.py cuda_devices=1 config_path=../configs/cola.yaml ensemble_series_dir=../workdir/run_train_ensemble_series/deberta/cola/ensembles/ output_dir=../workdir/run_glue_for_ensemble_series/deberta/cola/
+HYDRA_CONFIG_PATH=../configs/run_glue_for_ensemble_series.yaml python run_glue_for_ensemble_series.py cuda_devices=1 config_path=../configs/sst2.yaml ensemble_series_dir=../workdir/run_train_ensemble_series/deberta/sst2/ensembles/ output_dir=../workdir/run_glue_for_ensemble_series/deberta/sst2/

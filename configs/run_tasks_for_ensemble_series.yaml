@@ -1,0 +1,10 @@
+cuda_devices: ''
+hydra:
+  run:
+    dir: ${output_dir}
+
+output_dir: '../workdir/run_tasks_for_ensemble_series'
+config_path: '../configs/mrpc.yaml'
+script: 'run_glue.py'
+args: 'ue.use_cache=False'
+ensemble_series_dir: '../workdir/ensembles/mrpc/electra'

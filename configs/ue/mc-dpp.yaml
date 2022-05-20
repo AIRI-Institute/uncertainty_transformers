@@ -1,0 +1,24 @@
+ue_type: 'mc-dpp'
+dropout_type: 'DPP'
+inference_prob: 0.1
+committee_size: 20
+dropout_subs: 'last'
+use_cache: True
+eval_passes: False
+calibrate: True
+use_selective: False
+lamb: 0.01
+reg_type: 'reg-curr'
+dropout:
+    max_n: 100
+    max_frac: 0.4
+    mask_name: 'ht_dpp'
+    dry_run_dataset: 'eval'
+    is_reused_mask: True
+    mask_name_for_mask: 'rbf'
+    committee_size: 20
+    use_ood_sampling: False
+    ood_sampling:
+        dataset_name: 'imdb'
+        subset: 'test'
+        number_of_samples: 5000

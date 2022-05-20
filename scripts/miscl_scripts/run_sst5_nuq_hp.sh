@@ -1,0 +1,2 @@
+bash run_train_sst5_models_glue_nuq_hp.sh
+bash run_eval_sst5_models_glue_nuq_hp.sh

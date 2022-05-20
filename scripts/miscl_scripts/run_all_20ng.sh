@@ -1,0 +1,3 @@
+bash run_eval_20ng_dpp_models.sh
+bash run_eval_20ng_mc_models.sh
+bash run_eval_20ng_det_models.sh

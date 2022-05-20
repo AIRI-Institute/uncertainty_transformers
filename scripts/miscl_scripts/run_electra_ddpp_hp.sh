@@ -1,0 +1,2 @@
+bash run_train_electra_models_glue_dpp_hp.sh
+bash run_eval_electra_models_glue_dpp_hp.sh

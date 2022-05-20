@@ -1,0 +1,10 @@
+cd ../../src
+
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py script=run_glue_with_hyp_search.py cuda_devices=[0] seeds=[23419] args='ue\=msd do_ue_estimate\=False ue.calibrate\=True data.validation_subsample\=0.0 training\=electra_base ue.dropout_subs\=last +training.save_strategy\=no' task_configs=mrpc_mixup.yaml output_dir=../workdir/run_train_models/mixup_electra_hypopt/mrpc
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py script=run_glue_with_hyp_search.py cuda_devices=[0] seeds=[23419] args='ue\=msd do_ue_estimate\=False ue.calibrate\=True data.validation_subsample\=0.0 training\=electra_base ue.dropout_subs\=last +training.save_strategy\=no' task_configs=cola_mixup.yaml output_dir=../workdir/run_train_models/mixup_electra_hypopt/cola
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py script=run_glue_with_hyp_search.py cuda_devices=[0] seeds=[23419] args='ue\=msd do_ue_estimate\=False ue.calibrate\=True data.validation_subsample\=0.0 training\=electra_base ue.dropout_subs\=last +training.save_strategy\=no' task_configs=sst2_mixup.yaml output_dir=../workdir/run_train_models/mixup_electra_hypopt/sst2
+
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py script=run_conll2003_with_hyp_search.py task_configs=conll2003_mixup.yaml args='do_ue_estimate\=False data.subsample_perc_val\=0.1 data.subsample_perc\=0.1 ue.use_selective\=False +training.save_strategy\=no' seeds=[23419] cuda_devices=[0] output_dir='../workdir/run_train_models/mixup_electra_hypopt/conll'
+
+# TODO: Attention - change script in run_train_models_with_hyp_search before running!
+#HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py script=run_newsgroup_with_hyp_search.py cuda_devices=[0] seeds=[23419] args='ue\=msd do_ue_estimate\=False ue.calibrate\=True data.validation_subsample\=0.0 training\=electra_base ue.dropout_subs\=last +training.save_strategy\=no' task_configs=20ng_mixup.yaml output_dir=../workdir/run_train_models/mixup_electra_hypopt/20ng

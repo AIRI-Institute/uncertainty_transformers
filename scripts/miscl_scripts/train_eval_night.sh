@@ -1,0 +1,4 @@
+#bash run_train_models_full_reg_cola_sst2.sh 
+bash run_eval_dpp_models_final_res_cola_reg.sh &
+bash run_eval_dpp_models_final_res_sst2_reg.sh
+bash ../ner_scripts/run_eval_dpp_models_final_res_conll2003.sh

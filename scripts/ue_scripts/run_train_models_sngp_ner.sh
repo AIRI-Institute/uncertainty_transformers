@@ -1,0 +1,3 @@
+cd ../../src
+# for this script, switch to torch 1.7.1
+HYDRA_CONFIG_PATH=../configs/run_train_models.yaml python ./run_train_models.py cuda_devices=[0,1,2,3,4,5] script=run_conll2003.py args='ue\=sngp do_ue_estimate\=False ue.use_selective\=False ue.calibrate\=False data.subsample_perc_val\=0.1 data.subsample_perc\=0.1 training\=electra_base ue.sngp.ridge_factor\=0.0001 ue.sngp.momentum\=0.999 training.num_train_epochs\=85 training.learning_rate\=5e-05 training.per_device_train_batch_size\=8 +training.weight_decay\=0.01 +ue.sngp.use_paper_version\=True +ue.use_paper_version\=True' task_configs=conll2003.yaml output_dir=../workdir/run_train_models/electra_raw_sngp/conll2003/0.1

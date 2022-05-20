@@ -1,0 +1,2 @@
+bash run_train_deberta_models_sn.sh
+bash run_eval_deberta_models_det_best_sn.sh

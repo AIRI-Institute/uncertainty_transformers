@@ -1,0 +1,9 @@
+**/workdir
+**/runs
+**/wandb
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+**/__pycache__
+**/runs_conll
+*/nohup*
+*/mlruns/*

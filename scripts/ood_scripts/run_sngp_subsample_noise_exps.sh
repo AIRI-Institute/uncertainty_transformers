@@ -1,0 +1,3 @@
+bash run_exps_ood_noise_sngp.sh
+bash run_exps_subsamples_sngp.sh
+bash run_exps_new_benchmark_subsamples_sngp.sh

@@ -1,0 +1,11 @@
+cuda_devices: ''
+hydra:
+  run:
+    dir: ${output_dir}
+    
+config_path: '../configs/run_glue.yaml'
+model_series_dir: '../workdir/models/mrpc/electra/'
+script: 'run_glue.py'
+args: ''
+seeds: '17,42'
+output_dir: '../workdir/run_glue_for_model_series'

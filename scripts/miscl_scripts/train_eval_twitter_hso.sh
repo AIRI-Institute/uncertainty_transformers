@@ -1,0 +1,2 @@
+bash run_train_electra_models_twitter_hso.sh
+bash run_eval_electra_models_twitter_hso_det_best.sh  

@@ -1,0 +1,12 @@
+ue_type: 'msd'
+dropout_type: 'MC'
+dropout_subs: 'all'
+inference_prob: 0.1
+committee_size: 20
+use_cache: False
+eval_passes: False
+calibrate: False
+use_spectralnorm: False
+use_selective: False
+lamb: 0.01
+reg_type: 'reg-curr'

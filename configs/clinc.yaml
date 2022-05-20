@@ -1,0 +1,33 @@
+hydra:
+  run:
+    dir: ${output_dir}/${data.task_name}/${ue.ue_type}_${ue.dropout_subs}/${data.subsample_perc}/${suffix}/${now:%Y-%m-%d}/${now:%H-%M-%S}-${repeat}
+    
+model:
+    model_name_or_path: 'google/electra-base-discriminator'
+
+ue: ???
+training: ???
+
+data:
+    task_name: 'clinc_oos'
+    task_subset: 'plus'
+    task_test: 'test'
+    data_dir: '../workdir/glue_data/Clinc_OOS/'
+    subsample_perc: 0
+    max_seq_length: 32
+    
+spectralnorm_layer: 'last'
+cache_dir: '../workdir/cache/'
+output_dir: '../workdir/results/'
+repeat: 0
+do_predict: True
+do_ue_estimate: True
+seed: 42
+suffix: ''
+do_train: True
+do_eval: True
+reset_params: False
+
+defaults:
+  - training: electra_base
+  - ue: mc-dpp

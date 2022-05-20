@@ -1,0 +1,2 @@
+bash run_train_electra_models_new_benchmark_sn_all.sh
+bash run_eval_electra_new_benchmark_sn_all.sh

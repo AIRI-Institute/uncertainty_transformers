@@ -1,0 +1,3 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_tasks_for_ensemble_series.yaml python run_tasks_for_ensemble_series.py cuda_devices=0 config_path=../configs/conll2003.yaml args='data.subsample_perc\=0.143 ue.calibrate\=False data.subsample_perc_val\=0.1' ensemble_series_dir=../workdir/run_train_ensemble_series/conll2003/electra/ensembles/  output_dir=../workdir/run_tasks_for_ensemble_series/conll2003/electra/ensembles script=run_conll2003.py
+HYDRA_CONFIG_PATH=../configs/run_calc_ues_metrics.yaml python ./run_calc_ues_metrics_ner.py runs_dir=../workdir/run_tasks_for_ensemble_series/conll2003/electra/ensembles/final_results extract_config=False output_dir=../workdir/run_calc_ues_metrics/electra_raw_no_sn/conll2003/ensemble;

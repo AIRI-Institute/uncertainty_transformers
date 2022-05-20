@@ -1,0 +1,2 @@
+bash run_exps_new_benchmark_noise.sh
+bash run_exps_new_benchmark_noise_sngp.sh

@@ -1,0 +1,4 @@
+cd ../../src
+CUDA_VISIBLE_DEVICES=0 HYDRA_CONFIG_PATH=../configs/20newsgroups_ood.yaml python ./run_ood_with_hyp_search.py ue\=mc do_ue_estimate\=False +ue.use_spectralnorm\=True ue.use_selective\=False ue.reg_type\=raw training\=electra_base hydra.run.dir=../workdir/hp_search/electra_raw_sn/20newsgroups_ood model.model_name_or_path='google/electra-base-discriminator' &
+CUDA_VISIBLE_DEVICES=1 HYDRA_CONFIG_PATH=../configs/20newsgroups_ood.yaml python ./run_ood_with_hyp_search.py ue\=mc do_ue_estimate\=False +ue.use_spectralnorm\=False ue.use_selective\=False ue.reg_type\=raw training\=electra_base hydra.run.dir=../workdir/hp_search/electra_raw_no_sn/20newsgroups_ood model.model_name_or_path='google/electra-base-discriminator'
+wait

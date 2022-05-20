@@ -1,0 +1,10 @@
+cd ../../src
+#CUDA_VISIBLE_DEVICES=0 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=True ue.reg_type\=metric +ue.use_spectralnorm\=False training\=electra_base hydra.run.dir=../workdir/hp_search/electra_metric_no_sn/qqp model.model_name_or_path='google/electra-base-discriminator' &
+#CUDA_VISIBLE_DEVICES=1 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=True ue.reg_type\=metric +ue.use_spectralnorm\=True training\=electra_base hydra.run.dir=../workdir/hp_search/electra_metric_sn/qqp model.model_name_or_path='google/electra-base-discriminator'
+#wait
+#CUDA_VISIBLE_DEVICES=0 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=True ue.reg_type\=reg-curr +ue.use_spectralnorm\=False training\=electra_base hydra.run.dir=../workdir/hp_search/electra_reg_no_sn/qqp model.model_name_or_path='google/electra-base-discriminator' &
+#CUDA_VISIBLE_DEVICES=1 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=True ue.reg_type\=reg-curr +ue.use_spectralnorm\=True training\=electra_base hydra.run.dir=../workdir/hp_search/electra_reg_sn/qqp model.model_name_or_path='google/electra-base-discriminator'
+#wait
+CUDA_VISIBLE_DEVICES=0 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=False ue.reg_type\=raw +ue.use_spectralnorm\=False training\=electra_base hydra.run.dir=../workdir/hp_search/electra_raw_no_sn/qqp model.model_name_or_path='google/electra-base-discriminator' &
+CUDA_VISIBLE_DEVICES=1 HYDRA_CONFIG_PATH=../configs/qqp.yaml python ./run_glue_with_hyp_search.py ue\=mc do_ue_estimate\=False ue.use_selective\=False ue.reg_type\=raw +ue.use_spectralnorm\=True training\=electra_base hydra.run.dir=../workdir/hp_search/electra_raw_sn/qqp model.model_name_or_path='google/electra-base-discriminator'
+wait

@@ -1,0 +1,2 @@
+bash run_train_electra_models_sst2_noise.sh
+bash run_eval_electra_models_sst2_det_noise.sh

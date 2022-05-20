@@ -1,0 +1,11 @@
+use_mixup: True
+mixup: True
+self_ensembling: True
+omega: 0.75
+lam1: 1.0
+lam2: 0.01
+gamma1: 1.0
+gamma2: 1.0
+beta1: 1.0
+beta2: 1.0
+margin: 10.0

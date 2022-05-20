@@ -1,0 +1,5 @@
+bash run_eval_deberta_models_glue_dpp_best.sh
+bash run_eval_deberta_models_glue_mc_best.sh
+bash run_eval_deberta_models_glue_det_best.sh
+#bash run_train_deberta_ensemble_models.sh
+#bash run_eval_deberta_ensemble_series.sh

@@ -1,0 +1,2 @@
+cd ../../src
+HYDRA_CONFIG_PATH=../configs/run_train_ensemble_series.yaml python ./run_train_ensemble_series.py task_configs=conll2003.yaml args='data.subsample_perc\=0.143 ue.calibrate\=True data.subsample_perc_val\=0.1 training.num_train_epochs\=12 training.learning_rate\=5e-05 training.per_device_train_batch_size\=32 +training.weight_decay\=0 +ue.margin\=5.0 +ue.lamb_intra\=0.008 ue.lamb\=0.008 model.model_name_or_path\=microsoft/deberta-base' output_dir='../workdir/run_train_ensemble_series/deberta/conll2003/' cuda_devices=[0,1,2,3,4,5] script=run_conll2003.py

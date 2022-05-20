@@ -1,0 +1,4 @@
+bash run_train_electra_models_subsamples_clinc.sh
+bash run_train_electra_models_subsamples_rostd.sh
+bash run_eval_electra_subsamples_clinc.sh
+bash run_eval_electra_subsamples_rostd.sh

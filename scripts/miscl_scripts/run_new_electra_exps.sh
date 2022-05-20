@@ -1,0 +1,2 @@
+bash run_train_electra_tmp.sh
+bash run_eval_electra_tmp.sh

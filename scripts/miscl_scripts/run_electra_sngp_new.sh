@@ -1,0 +1,2 @@
+bash run_train_models_sngp_new.sh
+bash run_eval_sngp_new.sh

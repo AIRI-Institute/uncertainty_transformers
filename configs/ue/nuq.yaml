@@ -1,0 +1,17 @@
+ue_type: 'nuq'
+dropout_subs: ''
+dropout_type: ''
+use_cache: True
+eval_passes: False
+calibrate: False
+use_spectralnorm: False
+use_selective: False
+lamb: 0.01
+margin: 0.05
+lamb_intra: 0.01
+reg_type: 'reg-curr'
+nuq:
+    tune_bandwidth: 'classification'
+    n_neighbors: 30
+    log_pN: 0
+    

@@ -1,0 +1,2 @@
+bash run_train_models_all.sh
+bash run_eval_nuq.sh
