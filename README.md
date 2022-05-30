@@ -51,4 +51,4 @@ Configuration files with parameters of models, datasets and uncertainty estimati
 # License
 © 2022 Autonomous Non-Profit Organization "Artificial Intelligence Research Institute" (AIRI). All rights reserved.
 
-Licensed under the [AIRI License BY-NC-SA v.1](AIRI_BY-NC-SA_License_v.1_en.docx)
+Licensed under the [MIT License](LICENSE)
